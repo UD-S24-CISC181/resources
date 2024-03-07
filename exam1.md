@@ -91,7 +91,7 @@ However, `const` is not transitive. It only prevents the variable from being rea
 
 ```typescript
 const arr = ["a", "b", "c"];
-arr = ["a, "b", "c"]; // ERROR: the variable arr can not be reassigned
+arr = ["a", "b", "c"]; // ERROR: the variable arr can not be reassigned
 arr.push("d"); // no error, arr is not reassigned
 arr[0] = ""; // no error, arr is not reassigned
 ```
