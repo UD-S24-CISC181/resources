@@ -227,6 +227,25 @@ When logged via `console.log`, the content of a string is what is printed to the
 
 **If you forget quotes around a string value, then it is not a string value. It is just text.**
 
+# Slicing
+
+Slicing rules are consistent between Python and Typescript. The only difference is that `slice` is a method in Typescript, instead of an operator syntax.
+
+The first number represents the starting position of the subscript, and the second number indicates the ending position of the subscript. If you use negative numbers in subscripts, you can work from the back of the array or string. If you use `-1`, then you get the last character. You can combine positive and negative in a range. To go from the start or the end, simply leave the second argument missing. In the example shown here, the first line indexes the last character (`"r"`). The second line subscripts all the characters after the first up to but not including the last character (`"amste"`). The third line subscripts the last three characters at the end of the string (`"ter"`). The fourth line subscripts the first three characters at the start of the string (`"ham"`).
+
+```typescript
+word = "hamster"
+
+console.log(word.slice(-1]);    // r
+console.log(word.slice(1, -1)); // amste
+console.log(word.slice(-3, ))   // ter
+console.log(word.slice(, 3))    // hame
+```
+
+Figuring out subscripts can be quite tricky. If you try to stare and count the indexes by hand, you are almost certainly going to make a mistake. Instead, take out a piece of paper and draw boxes around each character of the string. Then, number the boxes. Put indexes directly BELOW the boxes, and subscripts directly BETWEEN the boxes. You can then quickly check what character a given index corresponds to, or what range of characters are sandwiched between two subscripts.
+
+![image](https://github.com/UD-S24-CISC181/resources/assets/897227/693566aa-bb0e-4e61-9f4a-b66f043f3265)
+
 # Terminology
 
 You need to learn ALL of the follow words.
@@ -262,5 +281,10 @@ You need to learn ALL of the follow words.
     * Attribute
   * Constructor
   * Access
+  * Composition
 * Week 4 Vocabulary
   * Method
+* Week 5 Vocabulary
+  * Inheritance
+  * Extends
+  * Is-A vs Has-A
