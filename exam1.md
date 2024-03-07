@@ -246,6 +246,28 @@ Figuring out subscripts can be quite tricky. If you try to stare and count the i
 
 ![image](https://github.com/UD-S24-CISC181/resources/assets/897227/693566aa-bb0e-4e61-9f4a-b66f043f3265)
 
+# If/Else Control Flow
+
+Two `if` statements are NOT the same as an `if` followed by an `else if`:
+
+```typescript
+let alpha = 5;
+if (alpha > 4) {
+    console.log("This will be printed");
+} else if (alpha > 2) {
+    console.log("This will NOT be printed");
+}
+
+// vs.
+
+if (alpha > 4) {
+    console.log("This will be printed");
+}
+if (alpha > 2) {
+    console.log("This WILL be printed");
+}
+```
+
 # Terminology
 
 You need to learn ALL of the follow words.
